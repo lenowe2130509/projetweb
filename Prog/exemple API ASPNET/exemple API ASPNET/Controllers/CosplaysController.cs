@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using exemple_API_ASPNET.Data;
-using exemple_API_ASPNET.Models;
+using ProjectCosplay.Authentification;
+using ProjectCosplay.Data;
+using ProjectCosplay.Models;
 
-namespace exemple_API_ASPNET.Controllers
+namespace ProjectCosplay.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CosplaysController : ControllerBase
     {
-        private readonly exemple_API_ASPNETContext _context;
+        private readonly ProjectCosplayContext _context;
 
-        public CosplaysController(exemple_API_ASPNETContext context)
+        public CosplaysController(ProjectCosplayContext context)
         {
             _context = context;
         }
@@ -29,7 +33,13 @@ namespace exemple_API_ASPNET.Controllers
           {
               return NotFound();
           }
-            return await _context.Cosplay.ToListAsync();
+            if (IsAdmin())
+                return await _context.Cosplay.ToListAsync();
+            var nom = GetUserName();
+            if (nom != null)
+                return await _context.Cosplay.Where(b => b.ProprietaireId == nom).ToListAsync();
+
+            return NotFound();
         }
 
         // GET: api/Cosplays/5
@@ -43,6 +53,10 @@ namespace exemple_API_ASPNET.Controllers
             var cosplay = await _context.Cosplay.FindAsync(id);
 
             if (cosplay == null)
+            {
+                return NotFound();
+            }
+            if (!IsAdmin() && cosplay.ProprietaireId != GetUserName())
             {
                 return NotFound();
             }
@@ -119,6 +133,25 @@ namespace exemple_API_ASPNET.Controllers
         private bool CosplayExists(int id)
         {
             return (_context.Cosplay?.Any(e => e.CosplayID == id)).GetValueOrDefault();
+        }
+
+        private string? GetUserName() 
+        { 
+            var currentUser = HttpContext.User; 
+            if (currentUser.HasClaim(c => c.Type == ClaimTypes.Name)) 
+                return currentUser.Claims.FirstOrDefault(c => c.Type ==
+                ClaimTypes.Name)?.Value;
+            return null;
+        }
+
+        private bool IsAdmin() 
+        { 
+            var currentUser = HttpContext.User; 
+            if (currentUser.HasClaim(c => c.Type == 
+            ClaimTypes.Role)) 
+                return RolesUtilisateurs.Administrateur == currentUser.Claims.First(c => 
+                c.Type == ClaimTypes.Role).Value; 
+            return false; 
         }
     }
 }

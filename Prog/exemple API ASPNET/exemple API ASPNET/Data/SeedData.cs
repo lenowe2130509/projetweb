@@ -1,28 +1,30 @@
-﻿using exemple_API_ASPNET.Controllers;
+﻿using ProjectCosplay.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-namespace exemple_API_ASPNET.Data
+namespace ProjectCosplay.Data
 {
     public static class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using var context = new exemple_API_ASPNETContext(
+            using var context = new ProjectCosplayContext(
                         serviceProvider.GetRequiredService<DbContextOptions
-                        <exemple_API_ASPNETContext>>());
+                        <ProjectCosplayContext>>());
                 SeedDB(context);
         }
-        public static void SeedDB(exemple_API_ASPNETContext context)
+        public static void SeedDB(ProjectCosplayContext context)
         {
             if (context.Cosplay.Any())
-                return;
-            context.Cosplay.AddRange(
-                new Models.Cosplay { Nom = "Loup" },
-                new Models.Cosplay { Nom = "Sorcier" },
-                new Models.Cosplay { Nom = "Monkey D. Luffy" },
-                new Models.Cosplay { Nom = "Xavier" },
-                new Models.Cosplay { Nom = "Naruto :3" });
-            context.SaveChanges();
+            {
+                    context.Cosplay.AddRange(
+                    new Models.Cosplay { Nom = "Loup", ProprietaireId = "alice"},
+                    new Models.Cosplay { Nom = "Sorcier", ProprietaireId = "alice" },
+                    new Models.Cosplay { Nom = "Monkey D. Luffy" , ProprietaireId = "alice" },
+                    new Models.Cosplay { Nom = "Xavier", ProprietaireId = "alice" },
+                    new Models.Cosplay { Nom = "Naruto :3", ProprietaireId = "alice" });
+                    context.SaveChanges();
+            }
+            return;
         }
     }
 }

@@ -1,22 +1,57 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using exemple_API_ASPNET.Data;
-namespace exemple_API_ASPNET
+using Microsoft.IdentityModel.Tokens;
+using ProjectCosplay.Data;
+using System.Text;
+
+namespace ProjectCosplay
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddDbContext<exemple_API_ASPNETContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("exemple_API_ASPNETContext") ?? throw new InvalidOperationException("Connection string 'exemple_API_ASPNETContext' not found.")));
+            builder.Services.AddDbContext<ProjectCosplayContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ProjectCosplayContext") ?? throw new InvalidOperationException("Connection string 'ProjectCosplayContext' not found.")));
 
             // Add services to the container.
+            //Identity
+            builder.Services.AddIdentity<IdentityUser, IdentityRole > ()
+                .AddEntityFrameworkStores<ProjectCosplayContext>()
+                .AddDefaultTokenProviders();
+
+            //Adding Authentification
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme =
+JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme =
+JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            //Adding Jwt Bearer
+            .AddJwtBearer(options =>
+            {
+                options.SaveToken = true;
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = builder.Configuration["JWT:ValidAudience"],
+                    ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
+                };
+            });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
 
             var app = builder.Build();
 
@@ -36,7 +71,7 @@ namespace exemple_API_ASPNET
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
+            app.UseAuthentication();
 
             app.MapControllers();
 
