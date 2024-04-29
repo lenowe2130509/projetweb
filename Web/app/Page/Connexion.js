@@ -42,7 +42,10 @@ export default function Connexion() {
                         required 
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">Se connecter</button>
+                <a className="btn text-white align-item" style={{ display: 'block', margin: '0 auto' }}>
+                    <img src="/image/connexion.png" alt="Bootstrap" width="50%" height="50%"/>
+                </a>
+
             </form>
             <div className="mt-3 text-center">
                 <p>Vous n'avez pas de compte ?  <Link href="./Inscription">
