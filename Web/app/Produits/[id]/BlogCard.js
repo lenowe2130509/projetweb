@@ -1,3 +1,4 @@
+"use client";
 import { FaTrash, FaEdit } from 'react-icons/fa'; 
 import React from 'react';
 export default function BlogCard(props){

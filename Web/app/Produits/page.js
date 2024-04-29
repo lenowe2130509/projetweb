@@ -1,11 +1,9 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import BlogCard from './Produits/[id]/BlogCard';
-import Acceuil from './Page/Acceuil';
-import Connexion from './Page/Connexion';
+import BlogCard from './Page/BlogCard';
 
 export default function Home() {
-   /* const [publications, setPublications] = useState([]);
+    const [publications, setPublications] = useState([]);
 
     useEffect(() => {
         async function fetchPublications() {
@@ -19,11 +17,12 @@ export default function Home() {
     return (
         <div className="row" id="Publication">
             {publications.map(publication =>
-                <Acceuil />
+                <BlogCard key={publication.id} {...publication} />
             )}
         </div>
-    ); */
-    return (
-        <Acceuil />
-    )
+    );
 }
+
+
+
+
