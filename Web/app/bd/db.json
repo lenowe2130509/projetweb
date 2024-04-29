@@ -1,53 +1,46 @@
 {
   "Publication": [
     {
-      "titre": "CEPI",
-      "auteur": "Xx_DarkKnight063_xX",
-      "date de publication": "14/02/2024",
-      "Contenu": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "titre": "Tenu de Goku",
+      "Contenu": "YXHZVON Costume de Manga Cosplay, Déguisement pour Saiyan Dragon ball pour Halloween Fête Carnaval Party.",
+      "image": "./image_cosplay/goku.jpg",
+      "prix": "30,99$",
       "id": "1"
     },
     {
-      "id": "3",
-      "titre": "Blog 2",
-      "auteur": "Email",
-      "date de publication": "2024-04-12T19:46:08.882Z",
-      "Contenu": "gggggggggggggggggggggggg"
+      "titre": "Tenu de Dracaufeu",
+      "Contenu": "Amscan Combinaison à capuche unisexe sous licence officielle Pokémon Charizard pour enfants.",
+      "image": "./image_cosplay/dracaufeu.jpg",
+      "prix":"15,55$",
+      "id": "3"
     },
     {
-      "titre": "Comment Build sur Fornite",
-      "auteur": "Ninjaa",
-      "date de publication": "14/02/2024",
-      "Contenu": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "titre": "Zyimsva Maid Outfit",
+      "Contenu": " Femme Lolita FrançAis Maid Cosplay Costume Maid Dress - Costume de maid - Costume sexy et chaussettes.",
+      "image": "./image_cosplay/maid.jpg",
+      "prix":"16,79$",
       "id": "4"
     },
     {
-      "titre": "Comment créer une publication",
-      "auteur": "ADMIN",
-      "date de publication": "14/02/2024",
-      "Contenu": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "titre": "Déguisement Akatsuki",
+      "Contenu": "Adulte Enfant Cape, Akatsuki Cosplay Anneau Bandeau Bague Collier Accessoires Carnaval Tenue Manga pour Homme Femme Fille Garcon.",
+      "image":"./image_cosplay/akatsuki.jpg",
+      "prix":"21,66$",
       "id": "5"
     },
     {
-      "titre": "Les Bonbons Anys de Flavigny",
-      "auteur": "ADMIN",
-      "date de publication": "14/02/2024",
-      "Contenu": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "titre": "JYakeji",
+      "Contenu": "10 pièces de cosplay japonais Demon Slayer : Kimetsu no Yaiba Nezuko Kamado Cosplay Kimono avec perruque, convient pour le cosplay.",
+      "image":"./image_cosplay/nezuko.jpg",
+      "prix":"49,99$",
       "id": "6"
     },
     {
-      "titre": "WilliBed figure montant de Youtube",
-      "auteur": "WilliBed",
-      "date de publication": "14/02/2024",
-      "Contenu": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "titre": "GRACEART",
+      "Contenu": "Japonais Yukata Kimono Costume.",
+      "image":"./image_cosplay/yukata.jpg",
+      "prix":"42,99$",
       "id": "7"
-    },
-    {
-      "id": "539c",
-      "titre": "BONJOUR LES GENS ",
-      "auteur": "naseba",
-      "date de publication": "2024-04-12T15:59:38.595Z",
-      "Contenu": "anvguihsdzuhbhaud"
     }
   ],
   "Commentaire": [
@@ -55,175 +48,43 @@
       "id": "1",
       "publicationLier": 7,
       "date": "14/02/2024",
-      "Contenu": "J'ai perdu 10 minutes de ma vie a lire cette connerie de youtoubeur a la con. Cette génération est a pleindre sérieusement aller au milieu de la route et ne bouger plus. - Girard "
+      "Contenu": "J'ai adoré cet article ! Les cosplays présentés sont incroyables."
     },
     {
       "id": "2",
       "publicationLier": 7,
       "date": "14/02/2024",
-      "Contenu": "Whallah C'est bien."
+      "Contenu": "Merci pour cet article, très inspirant !"
     },
     {
       "id": "3",
       "publicationLier": 7,
       "date": "14/02/2024",
-      "Contenu": "Meilleur youtubeur que Squeezie. EST-CE QUE C'EST BON POUR VOUS! "
+      "Contenu": "Les cosplays sont vraiment impressionnants. Bravo aux artistes !"
     },
     {
       "id": "4",
       "publicationLier": 4,
       "date": "14/02/2024",
-      "Contenu": "FORNIIIIIIIIIIIIIIIIIITE MAAAAAAAAAAAAAAAAAN"
+      "Contenu": "J'aimerais tellement pouvoir fabriquer une armure de cosplay comme ça !"
     },
     {
       "id": "5",
       "publicationLier": 6,
       "date": "14/02/2024",
-      "Contenu": "Est-ce que quelqu'un c'est demander pourquoi l'admin a fait un blog sur des bonbons random ? "
-    },
-    {
-      "id": "5",
-      "publicationLier": 2,
-      "date": "14/02/2024",
-      "Contenu": " ômkdxvfdv 8iuhjo j86rd6vvbk,mun gdfhmiugc interessant"
+      "Contenu": "Le monde du cosplay professionnel est fascinant. Merci pour cette interview !"
     },
     {
       "id": "6",
       "publicationLier": 1,
       "date": "14/02/2024",
-      "Contenu": "C'est quoi ce pseudo?"
+      "Contenu": "Super article ! J'ai déjà hâte de découvrir les prochains cosplays à la mode."
     },
     {
       "id": "7",
       "publicationLier": 3,
       "date": "14/02/2024",
-      "Contenu": "https://www.youtube.com/watch?v=EBLZeKDYbrU"
-    },
-    {
-      "id": "3",
-      "publicationLier": 5,
-      "date": "14/02/2024",
-      "Contenu": "WAW! COMPLIQUER VOTRE TUTO !!! "
-    },
-    {
-      "id": "8",
-      "publicationLier": 1,
-      "date": "14/02/2024",
-      "Contenu": "Qui est chaud pour un Burgouz a 130 euro?"
-    },
-    {
-      "id": "9",
-      "publicationLier": 7,
-      "date": "14/02/2024",
-      "Contenu": "FIRST"
-    },
-    {
-      "id": "10",
-      "publicationLier": 3,
-      "date": "14/02/2024",
-      "Contenu": "Je ne sais pas quoi dire."
-    },
-    {
-      "id": "c5f3",
-      "publicationLier": "6",
-      "date": "2024-02-27T00:08:16.044Z",
-      "Contenu": "wow les bonbons de fou "
-    },
-    {
-      "id": "4fa9",
-      "publicationLier": "5",
-      "date": "2024-03-26T02:03:14.385Z",
-      "Contenu": "allo "
-    },
-    {
-      "id": "fdcb",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:20.188Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "5dac",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:22.532Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "f5e0",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:23.364Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "952c",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:24.683Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "78f5",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:25.212Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "3f9b",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:26.995Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "b1dc",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:27.147Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "fb0f",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:27.307Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "203d",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:27.492Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "32a4",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:27.756Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "bd2b",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:27.948Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "8b16",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:52:28.147Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "16d6",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:53:16.765Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "5e91",
-      "publicationLier": "5",
-      "date": "2024-04-10T19:53:16.933Z",
-      "Contenu": "\nfvahgvuighgWSAFDUYHDFQvgvDFWJHVDcacs dQVCDqjhvfjgc SAZ"
-    },
-    {
-      "id": "c810",
-      "publicationLier": "6",
-      "date": "2024-04-11T13:43:23.488Z",
-      "Contenu": "shubgag"
+      "Contenu": "Merci pour ce tutoriel. J'ai enfin osé me lancer dans la fabrication d'une armure !"
     }
   ]
 }
