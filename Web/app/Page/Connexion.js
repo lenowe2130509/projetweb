@@ -17,7 +17,13 @@ export default function Connexion() {
     };
 
     return (
-        <div className="card w-50 mx-auto">
+        <>
+        <div className='d-flex flex-column justify-content-center align-items-center'>
+            <div className='d-flex justify-content-center'>
+                <img src="../../image/AllMight.png" className="img-fluid" alt="Image 1" style={{position: "absolute", zIndex: "1", width: "750px", top: "35%"}}/>
+                <img src="../../image/Main_AllMight.png" className="img-fluid" alt="Image 1"style={{position: "absolute", zIndex: "3", top: "45%", right: "31%"}}/>
+            </div>        
+        <div className="card w-50" style={{position: "absolute", zIndex: "2"}}>
             <h1 className="text-center mb-4">Connexion</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -50,5 +56,7 @@ export default function Connexion() {
             </Link> </p>
             </div>
         </div>
+        </div>
+        </>
     );
 }
