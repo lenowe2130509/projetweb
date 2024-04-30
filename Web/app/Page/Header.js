@@ -26,7 +26,7 @@ export default function Header() {
                     </button>
                     <div className="sidebar offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div className="offcanvas-header text-white border-bottom">
-                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">BLOG CEPI</h5>
+                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Cosplay-Zone</h5>
                             <button type="button" className="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div className="offcanvas-body">
@@ -35,7 +35,7 @@ export default function Header() {
                                     <Link className="text-decoration-none text-black" href="/">Accueil</Link>
                                 </li>
                                 <li className="nav-item mx-2">
-                                    <Link className="text-decoration-none text-black" href="/Forum/1">Forum</Link>
+                                    <Link className="text-decoration-none text-black" href="/Boutique">Boutique</Link>
                                 </li>
                                 <li className="nav-item mx-2">
                                     <a className="nav-a text-decoration-none text-black" href="index.html">Aide</a>

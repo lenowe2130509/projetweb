@@ -31,4 +31,19 @@ h5 {
   font-family: "Ashito", serif;
 }
 
+@media (max-width: 767px) 
+{
+  .AllMight {
+    width: "80vw";
+    top: "40vh"  
+  }
+  .Hand {
+    width: "50vw";
+    top: "52vh";
+    right: "0vw";
+  }
+}
+
+
+
 /*# sourceMappingURL=bootstrap.css.map */

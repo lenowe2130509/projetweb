@@ -5,6 +5,7 @@
       "Contenu": "YXHZVON Costume de Manga Cosplay, Déguisement pour Saiyan Dragon ball pour Halloween Fête Carnaval Party.",
       "image": "./image_cosplay/goku.jpg",
       "prix": "30,99$",
+      "nbInventaire": "10",
       "id": "1"
     },
     {
@@ -12,6 +13,7 @@
       "Contenu": "Amscan Combinaison à capuche unisexe sous licence officielle Pokémon Charizard pour enfants.",
       "image": "./image_cosplay/dracaufeu.jpg",
       "prix":"15,55$",
+      "nbInventaire": "10",
       "id": "3"
     },
     {
@@ -19,6 +21,7 @@
       "Contenu": " Femme Lolita FrançAis Maid Cosplay Costume Maid Dress - Costume de maid - Costume sexy et chaussettes.",
       "image": "./image_cosplay/maid.jpg",
       "prix":"16,79$",
+      "nbInventaire": "10",
       "id": "4"
     },
     {
@@ -26,6 +29,7 @@
       "Contenu": "Adulte Enfant Cape, Akatsuki Cosplay Anneau Bandeau Bague Collier Accessoires Carnaval Tenue Manga pour Homme Femme Fille Garcon.",
       "image":"./image_cosplay/akatsuki.jpg",
       "prix":"21,66$",
+      "nbInventaire": "10",
       "id": "5"
     },
     {
@@ -33,6 +37,7 @@
       "Contenu": "10 pièces de cosplay japonais Demon Slayer : Kimetsu no Yaiba Nezuko Kamado Cosplay Kimono avec perruque, convient pour le cosplay.",
       "image":"./image_cosplay/nezuko.jpg",
       "prix":"49,99$",
+      "nbInventaire": "10",
       "id": "6"
     },
     {
@@ -40,6 +45,7 @@
       "Contenu": "Japonais Yukata Kimono Costume.",
       "image":"./image_cosplay/yukata.jpg",
       "prix":"42,99$",
+      "nbInventaire": "10",
       "id": "7"
     }
   ],
