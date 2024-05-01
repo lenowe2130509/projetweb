@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Server.Circuits;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -67,43 +68,47 @@ namespace ProjectCosplay.Controllers
         // PUT: api/Cosplays/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCosplay(int id, Cosplay cosplay)
+        public async Task<IActionResult> PutCosplay(int id, 
+            [Bind(nameof(Cosplay.CosplayID), nameof(Cosplay.Nom))]Cosplay cosplay)
         {
             if (id != cosplay.CosplayID)
             {
                 return BadRequest();
             }
-
-            _context.Entry(cosplay).State = EntityState.Modified;
-
-            try
+            var cosplayBD = await _context.Cosplay.FindAsync(id);
+            if(cosplayBD == null && (cosplayBD.ProprietaireId == GetUserName() || IsAdmin()))
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CosplayExists(id))
+                cosplayBD.Nom = cosplay.Nom;
+                _context.Entry(cosplay).State = EntityState.Modified;
+                try
                 {
-                    return NotFound();
+                    await _context.SaveChangesAsync();
                 }
-                else
+                catch (DbUpdateConcurrencyException)
                 {
-                    throw;
+                    if (!CosplayExists(id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
             }
-
             return NoContent();
         }
 
         // POST: api/Cosplays
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Cosplay>> PostCosplay(Cosplay cosplay)
+        public async Task<ActionResult<Cosplay>> PostCosplay([Bind(nameof(Cosplay.Nom))] Cosplay cosplay)
         {
           if (_context.Cosplay == null)
           {
               return Problem("Entity set 'exemple_API_ASPNETContext.Cosplay'  is null.");
           }
+            cosplay.ProprietaireId = GetUserName();
             _context.Cosplay.Add(cosplay);
             await _context.SaveChangesAsync();
 
@@ -119,7 +124,7 @@ namespace ProjectCosplay.Controllers
                 return NotFound();
             }
             var cosplay = await _context.Cosplay.FindAsync(id);
-            if (cosplay == null)
+            if (cosplay == null || (cosplay.ProprietaireId != GetUserName() && !IsAdmin()))
             {
                 return NotFound();
             }

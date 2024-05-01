@@ -19,7 +19,7 @@ namespace ProjectCosplay.Data
                     context.Cosplay.AddRange(
                     new Models.Cosplay { Nom = "Loup", ProprietaireId = "alice"},
                     new Models.Cosplay { Nom = "Sorcier", ProprietaireId = "alice" },
-                    new Models.Cosplay { Nom = "Monkey D. Luffy" , ProprietaireId = "alice" },
+                    new Models.Cosplay { Nom = "Monkey D. Luffy" , ProprietaireId = "Owen" },
                     new Models.Cosplay { Nom = "Xavier", ProprietaireId = "alice" },
                     new Models.Cosplay { Nom = "Naruto :3", ProprietaireId = "alice" });
                     context.SaveChanges();
