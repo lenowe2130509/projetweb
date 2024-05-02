@@ -28,3 +28,4 @@ namespace ProjectCosplay.Data
         }
     }
 }
+//Probleme avec CORS
