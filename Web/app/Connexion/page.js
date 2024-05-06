@@ -1,13 +1,8 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Inscription from '../Page/Inscription';
 import BootStrap from '@/public/CSS/Bootstrap.css';
-async function confirmerPublication(formData) {
-    const https = require('https');
-    const agent = new https.Agent({
-        rejectUnauthorized: false
-    });
+async function confirmerConnexion(formData) {
     let user = formData.get("username");
     let password = formData.get("password");
     var nouvelleConnexion = {
@@ -21,7 +16,7 @@ async function confirmerPublication(formData) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(nouvelleConnexion),
-        }).then(console.log("Connexion reussielllllllllllllllllll !"));   
+        }).then(console.log("Connexion réussie!"));   
 }
  
 export default function Home() {
@@ -34,7 +29,7 @@ export default function Home() {
             </div>        
             <div className="card w-50">
                 <h1 className="text-center mb-4">Connexion</h1>
-                <form className='d-flex flex-column justify-content-center align-items-center' id="AddLogin" action={confirmerPublication}>
+                <form className='d-flex flex-column justify-content-center align-items-center' id="AddLogin" action={confirmerConnexion}>
                     <div className="mb-3">
                         <label htmlFor="username" className="form-label">Nom d'utilisateur</label>
                         <input type="text" id="username" className="form-label" name="username" required></input>
@@ -48,9 +43,11 @@ export default function Home() {
                     </button>    
                 </form>
                 <div className="mt-5 text-center">
-                    <p>Vous n'avez pas de compte ?  <Link href="./Inscription">
-                    <button className="btn btn-primary">S'inscrire</button>
-                </Link> </p>
+                    <p>Vous n'avez pas de compte ?  
+                        <Link href="../Inscription">
+                            <button className="btn btn-primary">S'inscrire</button>
+                        </Link> 
+                    </p>
                 </div>
             </div>
         </div>
