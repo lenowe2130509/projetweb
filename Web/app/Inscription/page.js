@@ -10,10 +10,13 @@ async function confirmerInscription(formData) {
     let email = formData.get("email");
     let password = formData.get("password");
     var nouvelleInscription = {
-        "username": user,
         "email": email,
         "password": password,
-        };     
+        "username": user,
+        };   
+    console.log(email) ;
+    console.log(user);
+    console.log(password);
     const reponse = await fetch("https://localhost:7194/api/Authentification/register", {
         method: 'POST',
         agent,
@@ -21,7 +24,7 @@ async function confirmerInscription(formData) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(nouvelleInscription),
-        }).then(console.log("Inscription Réussie!"));   
+        })
 }
  
 export default function Home() {
@@ -32,7 +35,7 @@ export default function Home() {
             <form className='d-flex flex-column justify-content-center align-items-center' action={confirmerInscription}>
                 <div className="mb-3 w-75">
                     <label htmlFor="username" className="form-label">Nom d'utilisateur</label>
-                    <input type="text" className="form-control" id="username" required/>
+                    <input type="text" className="form-control" id="username" name="username" required/>
                 </div>
                 <div className="mb-3 w-75">
                     <label htmlFor="email" className="form-label">Adresse email</label>
@@ -40,12 +43,13 @@ export default function Home() {
                     type="email" 
                     className="form-control" 
                     id="email" 
+                    name="email"
                     required 
                 />
                 </div>
                 <div className="mb-3 w-75">
                     <label htmlFor="password" className="form-label">Mot de passe</label>
-                    <input type="password" className="form-control" id="password" required />
+                    <input type="password" className="form-control" id="password" name="password" required />
                 </div>
                 <button type="submit" className="btn btn-primary">S'inscrire</button>
             </form>

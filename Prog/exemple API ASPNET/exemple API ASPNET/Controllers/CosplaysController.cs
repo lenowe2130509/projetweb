@@ -14,7 +14,6 @@ using ProjectCosplay.Models;
 
 namespace ProjectCosplay.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CosplaysController : ControllerBase
@@ -34,15 +33,9 @@ namespace ProjectCosplay.Controllers
           {
               return NotFound();
           }
-            if (IsAdmin())
-                return await _context.Cosplay.ToListAsync();
-            var nom = GetUserName();
-            if (nom != null)
-                return await _context.Cosplay.Where(b => b.ProprietaireId == nom).ToListAsync();
-
-            return NotFound();
+          return await _context.Cosplay.ToListAsync();
         }
-
+        [Authorize]
         // GET: api/Cosplays/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Cosplay>> GetCosplay(int id)
@@ -69,7 +62,7 @@ namespace ProjectCosplay.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCosplay(int id, 
-            [Bind(nameof(Cosplay.CosplayID), nameof(Cosplay.Nom))]Cosplay cosplay)
+            [Bind(nameof(Cosplay.CosplayID), nameof(Cosplay.Titre))]Cosplay cosplay)
         {
             if (id != cosplay.CosplayID)
             {
@@ -78,7 +71,7 @@ namespace ProjectCosplay.Controllers
             var cosplayBD = await _context.Cosplay.FindAsync(id);
             if(cosplayBD == null && (cosplayBD.ProprietaireId == GetUserName() || IsAdmin()))
             {
-                cosplayBD.Nom = cosplay.Nom;
+                cosplayBD.Titre = cosplay.Titre;
                 _context.Entry(cosplay).State = EntityState.Modified;
                 try
                 {
@@ -102,7 +95,7 @@ namespace ProjectCosplay.Controllers
         // POST: api/Cosplays
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Cosplay>> PostCosplay([Bind(nameof(Cosplay.Nom))] Cosplay cosplay)
+        public async Task<ActionResult<Cosplay>> PostCosplay([Bind(nameof(Cosplay.Titre))] Cosplay cosplay)
         {
           if (_context.Cosplay == null)
           {

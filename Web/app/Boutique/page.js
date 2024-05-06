@@ -7,9 +7,15 @@ export default function Home() {
 
     useEffect(() => {
         async function fetchPublications() {
-            const response = await fetch('http://localhost:3000/Publication');
-            const data = await response.json();
-            setPublications(data);
+            try {
+                const response = await fetch('https://localhost:7194/api/Cosplays', {
+                    method: 'GET',
+                });
+                const data = await response.json();
+                setPublications(data);
+            } catch (error) {
+                console.error('Erreur lors de la récupération des publications:', error);
+            }
         }
         fetchPublications();
     }, []);
