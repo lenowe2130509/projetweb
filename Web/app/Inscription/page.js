@@ -17,7 +17,7 @@ async function confirmerInscription(formData) {
     console.log(email) ;
     console.log(user);
     console.log(password);
-    const reponse = await fetch("https://localhost:7194/api/Authentification/register", {
+    const reponse = await fetch("https://projet07-dicjprog4.cegepjonquiere.ca/api/Authentification/register", {
         method: 'POST',
         agent,
         headers: {

@@ -8,7 +8,7 @@ export default function Home() {
     useEffect(() => {
         async function fetchPublications() {
             try {
-                const response = await fetch('https://localhost:7194/api/Cosplays', {
+                const response = await fetch('https://projet07-dicjprog4.cegepjonquiere.ca/api/Cosplays', {
                     method: 'GET',
                 });
                 const data = await response.json();

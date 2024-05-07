@@ -11,10 +11,10 @@ export default function ProductCard(props){
                 <div className="card-body">
                     <h5 className="card-title fw-bold">{props.titre}</h5>
                     <p className="card-text m-3 text-truncate-2">{props.Contenu}</p>
-                    <h4 className='fw-bold '> Prix : {props.prix} $</h4>
+                    <h4 className='fw-bold '> Prix : {props.prix} ID : {props.cosplayID}  $</h4>
                     <h6> Il reste {props.nbInventaire} articles.</h6>
                     <div className="d-flex justify-content-between">
-                        <a href={`Produits/${props.id}`} className="btn btn-primary">Lire la suite</a>
+                        <a href={`Produits/${props.cosplayID}`} className="btn btn-primary">Lire la suite</a>
                         <div>
                             <button className="btn btn-secondary me-2">
                                 <a className='text-decoration-none text-white' href={`../AddPage/ComposantForm/ModifForm/${props.id}`}>
