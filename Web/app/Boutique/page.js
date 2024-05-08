@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
+import { FaPlusCircle } from 'react-icons/fa'
 import ProductCard from './ProductCard';
 
 export default function Home() {
@@ -21,10 +22,19 @@ export default function Home() {
     }, []);
 
     return (
+        <>
+        <div className='d-flex justify-content-end m-3' >
+            <button className="btn btn-primary me-2 ">
+                <a className='text-decoration-none text-white' href={`../AjoutProduit`}>
+                    <FaPlusCircle /> Ajouter
+                </a>
+            </button>
+        </div>
         <div className="row" id="Publication">
             {publications.map(publication =>
                 <ProductCard key={publication.id} {...publication} />
             )}
         </div>
+        </>
     );
 }

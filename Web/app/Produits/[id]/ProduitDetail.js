@@ -7,7 +7,7 @@ export default function ProduitDetail() {
   const [quantity, setQuantity] = useState(1);
  
   React.useEffect(() => {
-    fetch(`http://localhost:3000/Publication/${id}`, {
+    fetch(`https://projet07-dicjprog4.cegepjonquiere.ca/api/Cosplays/${id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ export default function ProduitDetail() {
               <img
                 src={`../${produitDetails.image}`}
                 alt="Product"
-                className="img-fluid order-first"
+                className="img-fluid order-first m-2"
                 style={{ maxWidth: "50%", width: "50%" }}
               />
               <div style={{ marginLeft: "10px" }}>
@@ -65,9 +65,6 @@ export default function ProduitDetail() {
                   <button onClick={addQuantity}>+</button>
                 </div>
               </div>
-            </div>
-            <div className="d-flex flex-column p-3">
-              <p>Description du produit: {produitDetails.Contenu}</p>
             </div>
           </div>
         </div>

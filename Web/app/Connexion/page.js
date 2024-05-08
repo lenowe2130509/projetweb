@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import BootStrap from '@/public/CSS/Bootstrap.css';
+import { NEXT_CACHE_REVALIDATE_TAG_TOKEN_HEADER } from 'next/dist/lib/constants';
 async function confirmerConnexion(formData) {
     const https = require('https');
     const agent = new https.Agent({
@@ -20,7 +21,14 @@ async function confirmerConnexion(formData) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(nouvelleConnexion),
-        }).then(console.log("Connexion réussie!"));   
+        })
+        if(reponse.status === 200)  
+        {
+            let data = reponse.json();
+            let token = data.token;
+            localStorage.setItem("token", token);
+            window.location.href = "../Boutique";
+        }
 }
  
 export default function Home() {

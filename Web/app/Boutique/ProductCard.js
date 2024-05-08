@@ -6,7 +6,7 @@ export default function ProductCard(props){
         <div className="col-lg-4 col-md-6 mb-4">
             <div className="card m-2 custom-card">
             <div className="ratio ratio-16x9"> 
-                    <img src={props.image} className="card-img-top" alt="Image 1"/>
+                    <img src={props.image} className="card-img-top m-2" alt="Image 1"/>
                 </div>
                 <div className="card-body">
                     <h5 className="card-title fw-bold">{props.titre}</h5>
