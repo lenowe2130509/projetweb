@@ -54,7 +54,7 @@ return(
             </div>
             <div className="mb-3 w-75">
                 <label htmlFor="image" className="form-label text-white">Image:</label>
-                <input type="text" id="image" name="image"/>
+                <input type="text" id="image" name="image" required/>
             </div>
             <div className="mb-3">
                 <button type="submit" id="send" className="btn btn-primary">Envoyer</button>

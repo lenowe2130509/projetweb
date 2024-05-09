@@ -17,7 +17,7 @@ export default function ProductCard(props){
                         <a href={`Produits/${props.cosplayID}`} className="btn btn-primary">Lire la suite</a>
                         <div>
                             <button className="btn btn-secondary me-2">
-                                <a className='text-decoration-none text-white' href={`../AddPage/ComposantForm/ModifForm/${props.id}`}>
+                                <a className='text-decoration-none text-white' href={`../ModifProduit/${props.cosplayID}`}>
                                     <FaEdit /> Modifier
                                 </a>
                             </button>

@@ -24,9 +24,10 @@ async function confirmerConnexion(formData) {
         })
         if(reponse.status === 200)  
         {
-            let data = reponse.json();
+            let data = await reponse.json();
             let token = data.token;
             localStorage.setItem("token", token);
+            console.log("TOKEN "+ localStorage.getItem("token"));
             window.location.href = "../Boutique";
         }
 }
