@@ -11,6 +11,11 @@ export default function AddForm(props) {
               duplex: "half",
               body: JSON.stringify(props.params.id),
             })
+
+        if(reponse.status === 200)
+        {
+            window.location.href = "../Boutique";
+        }
     }
     return( 
         <>

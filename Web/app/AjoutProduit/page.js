@@ -29,7 +29,12 @@ export default function AddForm(){
                 "Authorization": "Bearer token" + token
             },
             body: JSON.stringify(nouveauProduit),
-            })             
+            }) 
+            
+            if(reponse.status === 200)
+            {
+                window.location.href = "../Boutique";
+            }
     }
 return(
     <>
