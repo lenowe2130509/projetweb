@@ -22,7 +22,7 @@ export default function ProductCard(props){
                                 </a>
                             </button>
                             <button className="btn btn-danger text-decoration-none">
-                                <a className='text-decoration-none text-white' href={`../AddPage/ComposantForm/DeleteForm/${props.id}`}>
+                                <a className='text-decoration-none text-white' href={`../SuppProduit/${props.cosplayID}`}>
                                     <FaTrash /> Supprimer
                                 </a>
                             </button>

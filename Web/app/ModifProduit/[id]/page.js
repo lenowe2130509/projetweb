@@ -7,6 +7,7 @@ export default function ModifyForm(props) {
 
     useEffect(() => {
         async function fetchData() {
+            console.log(props.params.id);
             const response = await fetch(`https://projet07-dicjprog4.cegepjonquiere.ca/api/Cosplays/${props.params.id}`, {
                 method: 'GET',
                 headers: {
