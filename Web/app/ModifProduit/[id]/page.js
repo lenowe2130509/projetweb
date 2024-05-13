@@ -48,6 +48,7 @@ export default function ModifyForm(props) {
                 'Content-Type': 'application/json',
                 "Authorization": "Bearer token" + localStorage.getItem('token')
             },
+            duplex: "half",
             body: JSON.stringify(nouveauProduit),
             })   
     }

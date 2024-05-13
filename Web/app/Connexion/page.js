@@ -27,6 +27,7 @@ async function confirmerConnexion(formData) {
             let data = await reponse.json();
             let token = data.token;
             localStorage.setItem("token", token);
+            localStorage.setItem("username", user);
             console.log("TOKEN "+ localStorage.getItem("token"));
             window.location.href = "../Boutique";
         }
