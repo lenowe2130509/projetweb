@@ -104,13 +104,22 @@
       "CosplayID": "7",
       "Prix": 30.99,
       "Quantite": 1,
-      "id": "c3c9"
+      "id": "c3c9",
+      "ClientID": "alice"
     },
     {
       "id": "93c8",
       "CosplayID": 8,
       "Prix": 15.55,
-      "Quantite": 2
+      "Quantite": 2,
+      "ClientID": "alice"
+    }
+  ],
+  "Commande": [
+    {
+      "CommandeID": "1",
+      "PrixTotal": 30.99,
+      "NomClient": "alice"
     }
   ]
 }
