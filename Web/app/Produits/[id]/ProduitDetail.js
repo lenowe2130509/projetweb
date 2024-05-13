@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import UserContext from "./UserContext";
+import { FaTrash, FaEdit, FaShoppingCart } from 'react-icons/fa';
 export default function ProduitDetail() {
   const id = React.useContext(UserContext);
   const [produitDetails, setProduitDetails] = React.useState([]);
@@ -47,6 +48,7 @@ export default function ProduitDetail() {
               />
               <div style={{ marginLeft: "10px" }}>
                 <h1 className="fw-bold">{produitDetails.titre}</h1>
+                <p>{produitDetails.contenu}</p>
                 <p>Inventaire: {produitDetails.nbInventaire}</p>
                 <h4>Prix total: {totalPrice} $</h4>
                 <p>Quantité: {quantity}</p>
@@ -64,6 +66,11 @@ export default function ProduitDetail() {
                   />
                   <button onClick={addQuantity}>+</button>
                 </div>
+                <button className="btn btn-danger text-decoration-none p-2 m-2">
+                  <a className='text-decoration-none text-white' href={`../Panier`}>
+                    <FaShoppingCart /> Ajouter au Panier
+                  </a>
+                </button>
               </div>
             </div>
           </div>
