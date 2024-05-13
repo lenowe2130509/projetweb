@@ -33,14 +33,44 @@ export default function ProduitDetail() {
  
   let totalPrice = (produitDetails.prix * quantity).toFixed(2);
  
- 
+  async function AjoutPanier() 
+  {
+    const response = await fetch(`https://projet07-dicjprog4.cegepjonquiere.ca/api/Cosplays/${id}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const data = await response.json();
+    setProduitDetails(data);
+
+
+    let CosplayID = data.cosplayID;
+    let Prix = data.prix
+    let Quantite = quantity;   
+
+    var nouvelleCommande = {
+        "CosplayID": CosplayID,
+        "Prix": Prix,
+        "Quantite": Quantite,     
+        };   
+    fetch("http://localhost:3000/CommandeCosplay", {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(nouvelleCommande),
+});  
+    console.log(nouvelleCommande);
+  }                                   
+
   return (
     <>
       <div className="d-flex justify-content-center">
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card m-2 custom-card">
             <div className="d-flex align-items-center">
-              <img
+              <img                     
                 src={`../${produitDetails.image}`}
                 alt="Product"
                 className="img-fluid order-first m-2"
@@ -66,8 +96,8 @@ export default function ProduitDetail() {
                   />
                   <button onClick={addQuantity}>+</button>
                 </div>
-                <button className="btn btn-danger text-decoration-none p-2 m-2">
-                  <a className='text-decoration-none text-white' href={`../Panier`}>
+                <button className="btn btn-danger text-decoration-none p-2 m-2" onClick={AjoutPanier}>
+                  <a className='text-decoration-none text-white'>
                     <FaShoppingCart /> Ajouter au Panier
                   </a>
                 </button>

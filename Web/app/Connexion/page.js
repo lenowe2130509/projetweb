@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import BootStrap from '@/public/CSS/Bootstrap.css';
+import BootStrap from '../../public/CSS/Bootstrap.css';
 import { NEXT_CACHE_REVALIDATE_TAG_TOKEN_HEADER } from 'next/dist/lib/constants';
 async function confirmerConnexion(formData) {
     const https = require('https');

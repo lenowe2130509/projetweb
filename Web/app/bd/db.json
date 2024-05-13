@@ -22,7 +22,7 @@
       "titre": "Zyimsva Maid Outfit",
       "Contenu": " Femme Lolita FrançAis Maid Cosplay Costume Maid Dress - Costume de maid - Costume sexy et chaussettes.",
       "image": "./image_cosplay/maid.jpg",
-      "prix":16.79,
+      "prix": 16.79,
       "quantite": 1,
       "nbInventaire": 10,
       "id": "9"
@@ -30,7 +30,7 @@
     {
       "titre": "Déguisement Akatsuki",
       "Contenu": "Adulte Enfant Cape, Akatsuki Cosplay Anneau Bandeau Bague Collier Accessoires Carnaval Tenue Manga pour Homme Femme Fille Garcon.",
-      "image":"./image_cosplay/akatsuki.jpg",
+      "image": "./image_cosplay/akatsuki.jpg",
       "prix": 21.66,
       "quantite": 1,
       "nbInventaire": 10,
@@ -39,7 +39,7 @@
     {
       "titre": "JYakeji",
       "Contenu": "10 pièces de cosplay japonais Demon Slayer : Kimetsu no Yaiba Nezuko Kamado Cosplay Kimono avec perruque, convient pour le cosplay.",
-      "image":"./image_cosplay/nezuko.jpg",
+      "image": "./image_cosplay/nezuko.jpg",
       "prix": 49.99,
       "quantite": 1,
       "nbInventaire": 10,
@@ -48,7 +48,7 @@
     {
       "titre": "GRACEART",
       "Contenu": "Japonais Yukata Kimono Costume.",
-      "image":"./image_cosplay/yukata.jpg",
+      "image": "./image_cosplay/yukata.jpg",
       "prix": 42.99,
       "quantite": 1,
       "nbInventaire": 10,
@@ -97,6 +97,20 @@
       "publicationLier": 10,
       "date": "14/02/2024",
       "Contenu": "Merci pour ce tutoriel. J'ai enfin osé me lancer dans la fabrication d'une armure !"
+    }
+  ],
+  "CommandeCosplay": [
+    {
+      "CosplayID": "7",
+      "Prix": 30.99,
+      "Quantite": 1,
+      "id": "c3c9"
+    },
+    {
+      "id": "93c8",
+      "CosplayID": 8,
+      "Prix": 15.55,
+      "Quantite": 2
     }
   ]
 }
