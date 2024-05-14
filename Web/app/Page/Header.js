@@ -48,7 +48,7 @@ export default function Header() {
                                 <button className="text-white" onClick={handleImageClick} style={{ border: 'none', background: 'none', padding: 0, cursor: 'pointer' }}>
                                     <img src="/image/detective_conan.png" alt="Bootstrap" width="50%" height="50%" />
                                 </button>
-                                <a className="text-white" href="#login">
+                                <a className="text-white" href="../Panier">
                                     <img src="/image/PanierShop.png" alt="Bootstrap" width="60%" height="60%" />
                                 </a>
                             </div>

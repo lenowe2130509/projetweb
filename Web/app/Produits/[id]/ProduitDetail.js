@@ -47,12 +47,17 @@ export default function ProduitDetail() {
 
     let CosplayID = data.cosplayID;
     let Prix = data.prix
-    let Quantite = quantity;   
+    let Titre = data.titre
+    let Quantite = quantity;  
+    let Image = data.image; 
 
     var nouvelleCommande = {
         "CosplayID": CosplayID,
         "Prix": Prix,
-        "Quantite": Quantite,     
+        "Titre": Titre,
+        "Quantite": Quantite,
+        "Image"  : Image,
+        "ClientID": localStorage.getItem("username"),   
         };   
     fetch("http://localhost:3000/CommandeCosplay", {
     method: 'POST',

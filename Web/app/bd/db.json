@@ -103,15 +103,46 @@
     {
       "CosplayID": "7",
       "Prix": 30.99,
+      "Titre": "Tenu de Goku",
       "Quantite": 1,
+      "Image": "./image_cosplay/goku.jpg",
       "id": "c3c9",
       "ClientID": "alice"
     },
     {
       "id": "93c8",
       "CosplayID": 8,
+      "Titre": "Tenu de Dracaufeu",
       "Prix": 15.55,
+      "Image": "./image_cosplay/dracaufeu.jpg",
       "Quantite": 2,
+      "ClientID": "alice"
+    },
+    {
+      "id": "3f8f",
+      "CosplayID": 9,
+      "Prix": 16.79,
+      "Titre": "Zyimsva Maid Outfit",
+      "Image": "./image_cosplay/maid.jpg",
+      "Quantite": 1,
+      "ClientID": "alice"
+    },
+    {
+      "id": "bccd",
+      "CosplayID": 7,
+      "Prix": 30.99,
+      "Titre": "Tenu de Goku",
+      "Quantite": 1,
+      "Image": "./image_cosplay/goku.jpg",
+      "ClientID": "alice"
+    },
+    {
+      "id": "fc9a",
+      "CosplayID": 10,
+      "Prix": 21.66,
+      "Titre": "Déguisement Akatsuki",
+      "Quantite": 1,
+      "Image": "./image_cosplay/akatsuki.jpg",
       "ClientID": "alice"
     }
   ],
