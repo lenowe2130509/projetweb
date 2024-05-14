@@ -57,6 +57,7 @@ export default function ProduitDetail() {
         "Titre": Titre,
         "Quantite": Quantite,
         "Image"  : Image,
+        "Status": "panier",
         "ClientID": localStorage.getItem("username"),   
         };   
     fetch("http://localhost:3000/CommandeCosplay", {

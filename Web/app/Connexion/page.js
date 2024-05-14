@@ -22,6 +22,7 @@ async function confirmerConnexion(formData) {
         },
         body: JSON.stringify(nouvelleConnexion),
         })
+        console.log(reponse.status);
         if(reponse.status === 200)  
         {
             let data = await reponse.json();
