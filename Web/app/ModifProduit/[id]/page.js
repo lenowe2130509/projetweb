@@ -7,7 +7,6 @@ export default function ModifyForm(props) {
 
     useEffect(() => {
         async function fetchData() {
-            console.log(props.params.id);
             const response = await fetch(`https://projet07-dicjprog4.cegepjonquiere.ca/api/Cosplays/${props.params.id}`, {
                 method: 'GET',
                 headers: {
@@ -29,10 +28,10 @@ export default function ModifyForm(props) {
         let prix = formData.get("prix");
         let nbInventaire = formData.get("nbInventaire");
         let image = formData.get("image");
-        let token = formData.get("token");
-        console.log(localStorage.getItem('token'));
+        let token = localStorage.getItem('token');
         
         var nouveauProduit = {
+            "cosplayId": props.params.id,
             "titre": titre,
             "contenu": contenu,
             "prix": prix,
@@ -41,16 +40,16 @@ export default function ModifyForm(props) {
             "quantite": 1,
             "proprietaireId": localStorage.getItem("username"),       
             };   
-            
-        const reponse = await fetch("https://projet07-dicjprog4.cegepjonquiere.ca/api/Cosplays/" + props.params.id, {
+        console.log(localStorage.getItem('token'));
+        console.log()
+        await fetch("https://projet07-dicjprog4.cegepjonquiere.ca/api/Cosplays/" + props.params.id, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                "Authorization": "Bearer token" + localStorage.getItem('token')
+                "Authorization": "Bearer " + localStorage.getItem('token')
             },
-            duplex: "half",
             body: JSON.stringify(nouveauProduit),
-            })   
+            })
     }
     return( 
         <>

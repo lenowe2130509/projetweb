@@ -58,12 +58,13 @@ export default function ProduitDetail() {
         "Quantite": Quantite,
         "Image"  : Image,
         "Status": "panier",
-        "ClientID": localStorage.getItem("username"),   
+        "ClientNom": localStorage.getItem("username"),   
         };   
-    fetch("http://localhost:3000/CommandeCosplay", {
+    fetch("https://projet07-dicjprog4.cegepjonquiere.ca/api/CommandeCosplays", {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
+        "Authorization": "Bearer " + localStorage.getItem('token')
     },
     body: JSON.stringify(nouvelleCommande),
 });  

@@ -10,7 +10,7 @@ export default function Home() {
   const clientName = localStorage.getItem("username");
 
   useEffect(() => {
-    fetch(`http://localhost:3000/CommandeCosplay?ClientID=${clientName}&Status=panier`, {
+    fetch(`https://projet07-dicjprog4.cegepjonquiere.ca/api/CommandeCosplay?ClientID=${clientName}&Status=panier`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ export default function Home() {
     {
       try {
         await Promise.all(data.map(item => {
-          item.Statut = "Acheté";
+          item.Status = "Acheté";
           return fetch(`http://localhost:3000/CommandeCosplay/${item.id}`, {
             method: 'PUT',
             headers: {

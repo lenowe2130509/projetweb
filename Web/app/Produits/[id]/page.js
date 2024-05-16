@@ -10,8 +10,6 @@ export default function Home({ params }) {
         <>
             <UserContext.Provider value={params.id}>
                 <ProduitDetail></ProduitDetail>
-                <AddComment> </AddComment>
-                <CommentList> </CommentList>
             </UserContext.Provider>
         </>
     )
