@@ -10,10 +10,11 @@ export default function Home() {
   const clientName = localStorage.getItem("username");
 
   useEffect(() => {
-    fetch(`https://projet07-dicjprog4.cegepjonquiere.ca/api/CommandeCosplay?ClientID=${clientName}&Status=panier`, {
+    fetch(`https://projet07-dicjprog4.cegepjonquiere.ca/api/CommandeCosplays?ClientID=${clientName}&Status=panier`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        "Authorization": "Bearer " + localStorage.getItem('token')
       }
     })
       .then(response => response.json())

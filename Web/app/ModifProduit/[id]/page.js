@@ -50,6 +50,8 @@ export default function ModifyForm(props) {
             },
             body: JSON.stringify(nouveauProduit),
             })
+
+
     }
     return( 
         <>
