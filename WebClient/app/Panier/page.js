@@ -4,13 +4,13 @@ import FormStyle from '../../public/CSS/Bootstrap.css';
 import { FaTrash, FaShoppingBag} from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import PanierCSS from "./Panier.css";
+import Link from 'next/link';
 
 export default function Home() {
   const [data, setData] = useState([]);
-  const clientName = localStorage.getItem("username");
 
   useEffect(() => {
-    fetch(`https://projet07-dicjprog4.cegepjonquiere.ca/api/CommandeCosplay?ClientID=${clientName}&Status=panier`, {
+    fetch(`http://localhost:3000/CommandeCosplay?Status=panier`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -19,11 +19,10 @@ export default function Home() {
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.error('Erreur lors de la récupération des commandes:', error));
-  }, [clientName]);
+  });
 
   async function ConfirmerCommande() {
   let PrixTotal = data.reduce((total, item) => total + item.Prix * item.Quantite, 0);
-  let NomClient = localStorage.getItem("username");
   if(PrixTotal === 0)
   {
     return alert("Votre panier est vide");
@@ -32,7 +31,7 @@ export default function Home() {
   {
     var Commande = {
       "PrixTotal": PrixTotal,
-      "NomClient": NomClient
+      "NomClient": "guest"
     };     
     const reponse = await fetch("http://localhost:3000/Commande", {
       method: 'POST',
@@ -81,11 +80,11 @@ export default function Home() {
                 </div>
         ))}
         <div className="d-flex justify-content-center align-items-center m-3">
-        <h2 className="font-weight-bold m-3"> Prix Total : {data.reduce((total, item) => total + item.Prix * item.Quantite, 0)}</h2>
+        <h2 className="font-weight-bold m-3"> Prix Total : {data.reduce((total, item) => total + item.Prix * item.Quantite, 0)}$</h2>
         <button className="Achat btn btn-primary text-decoration-none m-3" onClick={ConfirmerCommande}>
-          <a className='text-decoration-none text-white' href={`#`}>
+          <Link className='text-decoration-none text-white' href={`../api`}>
             <FaShoppingBag /> Acheter
-          </a>
+          </Link>
         </button>
         </div>
       </div>
