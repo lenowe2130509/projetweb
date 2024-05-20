@@ -53,14 +53,14 @@ export default function ProduitDetail() {
 
     var nouvelleCommande = {
         "cosplayID": CosplayID,
-        "prix": Prix,
-        "titre": Titre,
-        "quantite": Quantite,
-        "image"  : Image,
-        "status": "panier",
-        "clientNom": localStorage.getItem("username"),   
+        "Prix": Prix,
+        "Titre": Titre,
+        "Quantite": Quantite,
+        "Image"  : Image,
+        "Status": "panier",
+        "ClientNom": "guest",   
         };   
-    fetch("http://localhost:3000/CommandeCosplay", {
+    fetch("http://localhost:3000/CommandeCosplays", {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',

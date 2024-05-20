@@ -163,6 +163,46 @@
       "Image": "./image_cosplay/dracaufeu.jpg",
       "Status": "Acheté",
       "ClientNom": "alice"
+    },
+    {
+      "id": "5e0c",
+      "cosplayID": "1b50",
+      "prix": "120.99",
+      "titre": "Tenu de Naruto Chan ;3",
+      "quantite": 1,
+      "image": "./image_cosplay/Naruto.jpg",
+      "status": "panier",
+      "clientNom": "alice"
+    },
+    {
+      "id": "5f3f",
+      "cosplayID": "1b50",
+      "Prix": "120.99",
+      "Titre": "Tenu de Naruto Chan ;3",
+      "Quantite": 1,
+      "Image": "./image_cosplay/Naruto.jpg",
+      "Status": "Acheté",
+      "ClientNom": "guest"
+    },
+    {
+      "id": "300d",
+      "cosplayID": "10",
+      "Prix": 21.66,
+      "Titre": "Déguisement Akatsuki",
+      "Quantite": 1,
+      "Image": "./image_cosplay/akatsuki.jpg",
+      "Status": "Acheté",
+      "ClientNom": "guest"
+    },
+    {
+      "id": "5573",
+      "cosplayID": "10",
+      "Prix": 21.66,
+      "Titre": "Déguisement Akatsuki",
+      "Quantite": 1,
+      "Image": "./image_cosplay/akatsuki.jpg",
+      "Status": "Acheté",
+      "ClientNom": "guest"
     }
   ],
   "Commande": [
@@ -191,6 +231,11 @@
       "id": "6aaf",
       "Prix": "133.18",
       "NomClient": "alice"
+    },
+    {
+      "id": "feb4",
+      "PrixTotal": 164.31,
+      "NomClient": "guest"
     }
   ],
   "User": [

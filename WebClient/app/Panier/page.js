@@ -10,7 +10,7 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/CommandeCosplay?Status=panier`, {
+    fetch(`http://localhost:3000/CommandeCosplays?Status=panier`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ export default function Home() {
       try {
         await Promise.all(data.map(item => {
           item.Status = "Acheté";
-          return fetch(`http://localhost:3000/CommandeCosplay/${item.id}`, {
+          return fetch(`http://localhost:3000/CommandeCosplays/${item.id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
