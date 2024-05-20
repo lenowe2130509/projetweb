@@ -5,7 +5,6 @@ import ProductCard from './ProductCard';
 
 export default function Home() {
     const [publications, setPublications] = useState([]);
-
     useEffect(() => {
         async function fetchPublications() {
             try {

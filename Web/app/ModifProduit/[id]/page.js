@@ -29,6 +29,7 @@ export default function ModifyForm(props) {
         let nbInventaire = formData.get("nbInventaire");
         let image = formData.get("image");
         let token = localStorage.getItem('token');
+        let username = localStorage.getItem('username');
         
         var nouveauProduit = {
             "cosplayId": props.params.id,
@@ -38,10 +39,9 @@ export default function ModifyForm(props) {
             "nbInventaire": nbInventaire,
             "image": image,
             "quantite": 1,
-            "proprietaireId": localStorage.getItem("username"),       
+            "proprietaireId": username,       
             };   
         console.log(localStorage.getItem('token'));
-        console.log()
         await fetch("https://projet07-dicjprog4.cegepjonquiere.ca/api/Cosplays/" + props.params.id, {
             method: 'PUT',
             headers: {

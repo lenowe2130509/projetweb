@@ -357,6 +357,16 @@
       "id": "626a",
       "PrixTotal": 167.89999999999998,
       "NomClient": "alice"
+    },
+    {
+      "id": "416c",
+      "PrixTotal": null,
+      "NomClient": "Tierry"
+    },
+    {
+      "id": "78a0",
+      "PrixTotal": null,
+      "NomClient": "Tierry"
     }
   ]
 }

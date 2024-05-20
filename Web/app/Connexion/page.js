@@ -23,7 +23,7 @@ async function confirmerConnexion(formData) {
         body: JSON.stringify(nouvelleConnexion),
         })
         console.log(reponse.status);
-        if(reponse.status === 200)  
+        if(reponse.status === 200 || reponse.status === 201) 
         {
             let data = await reponse.json();
             let token = data.token;

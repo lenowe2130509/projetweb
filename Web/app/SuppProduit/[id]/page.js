@@ -11,11 +11,7 @@ export default function AddForm(props) {
               duplex: "half",
               body: JSON.stringify(props.params.id),
             })
-
-        if(reponse.status === 200)
-        {
             window.location.href = "../Boutique";
-        }
     }
     return( 
         <>
@@ -24,7 +20,7 @@ export default function AddForm(props) {
                         <p>Êtes-vous sûr de vouloir supprimer cet élément ?</p>
                         <div className="d-flex justify-content-center">
                             <button type="submit" className="btn btn-danger me-2">Confirmer</button>
-                            <button type="button" className="btn btn-secondary">Annuler</button>
+                            <button type="button" className="btn btn-secondary" onClick={() => window.location.href = "../Boutique"}>Annuler</button>
                         </div>
                     </div>
             </form>

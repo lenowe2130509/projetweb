@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from 'next/link';
 
 export default  function Error(){
     
@@ -14,7 +15,7 @@ export default  function Error(){
                     <div className="card-body">
                         <div className="text-center">
                         <h5 className="card-title fw-bold">Erreur dans l'application! Retour à la page d'accueil</h5>
-                            <Link className="btn text-white" href="./Acceuil">
+                            <Link className="btn text-white" href="../">
                                 <img src="/image/LAW-removebg-preview.png" alt="Bootstrap" width="50%" height="50%" />
                             </Link>
                             
