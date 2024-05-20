@@ -1,0 +1,210 @@
+{
+  "Publication": [
+    {
+      "titre": "Tenu de Goku",
+      "Contenu": "YXHZVON Costume de Manga Cosplay, Déguisement pour Saiyan Dragon ball pour Halloween Fête Carnaval Party.",
+      "image": "./image_cosplay/goku.jpg",
+      "prix": 30.99,
+      "quantite": 1,
+      "nbInventaire": 10,
+      "id": "7"
+    },
+    {
+      "titre": "Tenu de Dracaufeu",
+      "Contenu": "Amscan Combinaison à capuche unisexe sous licence officielle Pokémon Charizard pour enfants.",
+      "image": "./image_cosplay/dracaufeu.jpg",
+      "prix": 15.55,
+      "quantite": 1,
+      "nbInventaire": 10,
+      "id": "8"
+    },
+    {
+      "titre": "Zyimsva Maid Outfit",
+      "Contenu": " Femme Lolita FrançAis Maid Cosplay Costume Maid Dress - Costume de maid - Costume sexy et chaussettes.",
+      "image": "./image_cosplay/maid.jpg",
+      "prix": 16.79,
+      "quantite": 1,
+      "nbInventaire": 10,
+      "id": "9"
+    },
+    {
+      "titre": "Déguisement Akatsuki",
+      "Contenu": "Adulte Enfant Cape, Akatsuki Cosplay Anneau Bandeau Bague Collier Accessoires Carnaval Tenue Manga pour Homme Femme Fille Garcon.",
+      "image": "./image_cosplay/akatsuki.jpg",
+      "prix": 21.66,
+      "quantite": 1,
+      "nbInventaire": 10,
+      "id": "10"
+    },
+    {
+      "titre": "JYakeji",
+      "Contenu": "10 pièces de cosplay japonais Demon Slayer : Kimetsu no Yaiba Nezuko Kamado Cosplay Kimono avec perruque, convient pour le cosplay.",
+      "image": "./image_cosplay/nezuko.jpg",
+      "prix": 49.99,
+      "quantite": 1,
+      "nbInventaire": 10,
+      "id": "11"
+    },
+    {
+      "titre": "GRACEART",
+      "Contenu": "Japonais Yukata Kimono Costume.",
+      "image": "./image_cosplay/yukata.jpg",
+      "prix": 42.99,
+      "quantite": 1,
+      "nbInventaire": 10,
+      "id": "12"
+    },
+    {
+      "cosplayId": "1b50",
+      "titre": "Tenu de Naruto Chan ;3",
+      "Contenu": "SHARINGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNNN",
+      "prix": "120.99",
+      "nbInventaire": "10",
+      "image": "./image_cosplay/Naruto.jpg",
+      "quantite": 1,
+      "proprietaireId": "alice",
+      "id": "1b50"
+    }
+  ],
+  "CommandeCosplays": [
+    {
+      "CosplayID": "7",
+      "Prix": 30.99,
+      "Titre": "Tenu de Goku",
+      "Quantite": 1,
+      "Image": "./image_cosplay/goku.jpg",
+      "Status": "Acheté",
+      "id": "c3c9",
+      "ClientID": "alice"
+    },
+    {
+      "id": "3f8f",
+      "CosplayID": 9,
+      "Prix": 16.79,
+      "Titre": "Zyimsva Maid Outfit",
+      "Image": "./image_cosplay/maid.jpg",
+      "Status": "Acheté",
+      "Quantite": 1,
+      "ClientID": "alice"
+    },
+    {
+      "id": "bccd",
+      "CosplayID": 7,
+      "Prix": 30.99,
+      "Titre": "Tenu de Goku",
+      "Quantite": 1,
+      "Image": "./image_cosplay/goku.jpg",
+      "Status": "Acheté",
+      "ClientID": "alice"
+    },
+    {
+      "id": "fc9a",
+      "CosplayID": 10,
+      "Prix": 21.66,
+      "Titre": "Déguisement Akatsuki",
+      "Quantite": 1,
+      "Image": "./image_cosplay/akatsuki.jpg",
+      "Status": "Acheté",
+      "ClientID": "alice"
+    },
+    {
+      "id": "cd24",
+      "Prix": 30.99,
+      "Titre": "Tenu de Goku",
+      "Quantite": 1,
+      "Image": "./image_cosplay/goku.jpg",
+      "Status": "Acheté",
+      "ClientNom": "alice"
+    },
+    {
+      "id": "0852",
+      "Prix": 21.66,
+      "Titre": "Déguisement Akatsuki",
+      "Quantite": 1,
+      "Image": "./image_cosplay/akatsuki.jpg",
+      "Status": "Acheté",
+      "ClientNom": "alice"
+    },
+    {
+      "id": "5cf4",
+      "Prix": 21.66,
+      "Titre": "Déguisement Akatsuki",
+      "Quantite": 1,
+      "Image": "./image_cosplay/akatsuki.jpg",
+      "Status": "Acheté",
+      "ClientNom": "alice"
+    },
+    {
+      "id": "507c",
+      "CosplayID": "10",
+      "Prix": 21.66,
+      "Titre": "Déguisement Akatsuki",
+      "Quantite": 1,
+      "Image": "./image_cosplay/akatsuki.jpg",
+      "Status": "Acheté",
+      "ClientNom": "alice"
+    },
+    {
+      "id": "5cbe",
+      "CosplayID": "10",
+      "Prix": 21.66,
+      "Titre": "Déguisement Akatsuki",
+      "Quantite": 1,
+      "Image": "./image_cosplay/akatsuki.jpg",
+      "Status": "Acheté",
+      "ClientNom": "alice"
+    },
+    {
+      "id": "0ea1",
+      "CosplayID": "8",
+      "Prix": 15.55,
+      "Titre": "Tenu de Dracaufeu",
+      "Quantite": 1,
+      "Image": "./image_cosplay/dracaufeu.jpg",
+      "Status": "Acheté",
+      "ClientNom": "alice"
+    }
+  ],
+  "Commande": [
+    {
+      "CommandeID": "1",
+      "PrixTotal": 30.99,
+      "NomClient": "alice",
+      "id": "cc90"
+    },
+    {
+      "id": "48f2",
+      "PrixTotal": 0,
+      "NomClient": "alice"
+    },
+    {
+      "id": "e757",
+      "PrixTotal": 0,
+      "NomClient": "alice"
+    },
+    {
+      "id": "c273",
+      "PrixTotal": 131.53,
+      "NomClient": "alice"
+    },
+    {
+      "id": "6aaf",
+      "Prix": "133.18",
+      "NomClient": "alice"
+    }
+  ],
+  "User": [
+    {
+      "username": "alice",
+      "email": "alice@example.com",
+      "password": "Alice123!",
+      "id": "6a2e"
+    },
+    {
+      "username": "administrateur",
+      "email": "administrateur@example.com",
+      "password": "administrateur123!",
+      "id": "102b"
+    }
+  ]
+}
