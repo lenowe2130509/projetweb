@@ -56,7 +56,7 @@
     },
     {
       "cosplayId": "1b50",
-      "titre": "Tenu de Naruto Chan ;3",
+      "titre": "Tenu de Naruto",
       "Contenu": "SHARINGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNNN",
       "prix": "120.99",
       "nbInventaire": "10",
@@ -203,6 +203,26 @@
       "Image": "./image_cosplay/akatsuki.jpg",
       "Status": "Acheté",
       "ClientNom": "guest"
+    },
+    {
+      "id": "d8d6",
+      "cosplayID": "11",
+      "Prix": 49.99,
+      "Titre": "JYakeji",
+      "Quantite": 1,
+      "Image": "./image_cosplay/nezuko.jpg",
+      "Status": "Acheté",
+      "ClientNom": "guest"
+    },
+    {
+      "id": "df12",
+      "CosplayID": "7",
+      "Prix": 30.99,
+      "Titre": "Tenu de Goku",
+      "Quantite": 1,
+      "Image": "./image_cosplay/goku.jpg",
+      "Status": "Acheté",
+      "ClientNom": "alice"
     }
   ],
   "Commande": [
@@ -236,6 +256,16 @@
       "id": "feb4",
       "PrixTotal": 164.31,
       "NomClient": "guest"
+    },
+    {
+      "id": "89e2",
+      "PrixTotal": 49.99,
+      "NomClient": "guest"
+    },
+    {
+      "id": "702c",
+      "Prix": "30.99",
+      "NomClient": "alice"
     }
   ],
   "User": [
@@ -250,6 +280,12 @@
       "email": "administrateur@example.com",
       "password": "administrateur123!",
       "id": "102b"
+    },
+    {
+      "id": "2c1f",
+      "email": "owen@exemple.com",
+      "password": "Owen1234!",
+      "username": "owen"
     }
   ]
 }

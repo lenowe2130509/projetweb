@@ -67,7 +67,7 @@ export default function ProduitDetail() {
     },
     body: JSON.stringify(nouvelleCommande),
 });  
-    console.log(nouvelleCommande);
+    alert("Ajout du Produit dans le panier!");
   }                                   
 
   return (
@@ -84,7 +84,7 @@ export default function ProduitDetail() {
               />
               <div style={{ marginLeft: "10px" }}>
                 <h1 className="fw-bold">{produitDetails.titre}</h1>
-                <p>{produitDetails.contenu}</p>
+                <p>{produitDetails.Contenu}</p>
                 <p>Inventaire: {produitDetails.nbInventaire}</p>
                 <h4>Prix total: {totalPrice} $</h4>
                 <p>Quantité: {quantity}</p>

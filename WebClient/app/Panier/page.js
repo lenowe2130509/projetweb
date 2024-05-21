@@ -61,6 +61,15 @@ export default function Home() {
       }
     }
   }
+  async function Supprimer(id)
+  {
+    const response = await fetch(`http://localhost:3000/CommandeCosplays/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
   return (
     <>
       <div className="card d-flex flex-column justify-content-center align-items-center m-5">
@@ -72,7 +81,7 @@ export default function Home() {
                     </div>
                     <h5 className="m-3">Titre : {item.Titre}</h5>
                     <p className="m-3"> Prix : {item.Prix} | Quantite : x{item.Quantite}</p>
-                    <button className="btn btn-danger text-decoration-none">
+                    <button className="btn btn-danger text-decoration-none" onClick={() => Supprimer(item.id)}>
                         <a className='text-decoration-none text-white' href={`#`}>
                             <FaTrash /> Retirer
                         </a>

@@ -51,7 +51,9 @@ export default function Home() {
                 
             </div>
         </div>
+        <a href="https://www.youtube.com/watch?v=J0S6tc6dIK8&t=5s" target="_blank" rel="noopener noreferrer">
         <img src="../../image/TITAN_login.png" className="img-fluid w-25" alt="Image 1"/>
+        </a>
         </>
     );
 }
